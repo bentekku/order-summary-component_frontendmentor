@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//// VARIABLES
+/// Colors
+// Primary
+$pale-blue: hsl(225, 100%, 94%);
+$pale-blue-bg: hsla(225, 100%, 94%, 0.4);
+$bright-blue: hsl(245, 75%, 52%);
+$bright-blue-alpha: hsla(245, 75%, 52%, 0.75);
+// Neutral
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+/// Typography
+$para-fz: 16px;
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $pale-blue;
+  background-image: url("images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.attribution {
+  color: $dark-blue;
+  position: fixed;
+  bottom: 16px;
+  right: 0;
+  left: 0;
+  a,
+  a:visited {
+    color: $bright-blue;
+  }
+}
+
+.container {
+  width: 338px;
+  background-color: $very-pale-blue;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0px 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+
+    gap: 16px;
+    padding: 32px 16px;
+
+    h1 {
+      font-size: 22px;
+      font-weight: 900;
+      color: $dark-blue;
+    }
+    p {
+      color: $desaturated-blue;
+      font-size: $para-fz;
+      line-height: 1.5;
+    }
+    .plan {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $pale-blue-bg;
+      padding: 12px;
+      border-radius: 8px;
+
+      img {
+        width: 42px;
+        height: 42px;
+      }
+      a,
+      a:visited {
+        color: $bright-blue;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 700;
+        &:active {
+          color: $bright-blue-alpha;
+        }
+      }
+      .left {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 16px;
+
+        .plan-details {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: start;
+          h2 {
+            font-size: $para-fz;
+            color: $dark-blue;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    button {
+      width: 100%;
+      background-color: $bright-blue;
+      color: $very-pale-blue;
+      border: none;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: $para-fz;
+      font-weight: 700;
+
+      cursor: pointer;
+      &:active {
+        background-color: $bright-blue-alpha;
+        color: $very-pale-blue;
+        box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0px 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+    }
+    .cancel {
+      color: $desaturated-blue;
+      font-size: $para-fz;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      &:active {
+        color: $dark-blue;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .attribution {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url("images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  body {
+    background-image: url("images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

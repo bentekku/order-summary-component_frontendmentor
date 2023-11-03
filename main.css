@@ -1,1 +1,156 @@
-/*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(225, 100%, 94%);
+  background-image: url("images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.attribution {
+  color: hsl(223, 47%, 23%);
+  position: fixed;
+  bottom: 16px;
+  right: 0;
+  left: 0;
+}
+.attribution a,
+.attribution a:visited {
+  color: hsl(245, 75%, 52%);
+}
+
+.container {
+  width: 338px;
+  background-color: hsl(225, 100%, 98%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.container img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  gap: 16px;
+  padding: 32px 16px;
+}
+.container .details h1 {
+  font-size: 22px;
+  font-weight: 900;
+  color: hsl(223, 47%, 23%);
+}
+.container .details p {
+  color: hsl(224, 23%, 55%);
+  font-size: 16px;
+  line-height: 1.5;
+}
+.container .details .plan {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsla(225, 100%, 94%, 0.4);
+  padding: 12px;
+  border-radius: 8px;
+}
+.container .details .plan img {
+  width: 42px;
+  height: 42px;
+}
+.container .details .plan a,
+.container .details .plan a:visited {
+  color: hsl(245, 75%, 52%);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+.container .details .plan a:active,
+.container .details .plan a:visited:active {
+  color: hsla(245, 75%, 52%, 0.75);
+}
+.container .details .plan .left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+.container .details .plan .left .plan-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+}
+.container .details .plan .left .plan-details h2 {
+  font-size: 16px;
+  color: hsl(223, 47%, 23%);
+}
+.container .details .plan .left .plan-details p {
+  font-size: 14px;
+}
+.container .details button {
+  width: 100%;
+  background-color: hsl(245, 75%, 52%);
+  color: hsl(225, 100%, 98%);
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.container .details button:active {
+  background-color: hsla(245, 75%, 52%, 0.75);
+  color: hsl(225, 100%, 98%);
+  box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.container .details .cancel {
+  color: hsl(224, 23%, 55%);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+.container .details .cancel:active {
+  color: hsl(223, 47%, 23%);
+}
+
+@media screen and (max-width: 420px) {
+  .attribution {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url("images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 769px) {
+  body {
+    background-image: url("images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}/*# sourceMappingURL=main.css.map */
